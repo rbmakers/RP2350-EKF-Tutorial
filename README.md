@@ -49,7 +49,7 @@ $$
 **協方差**衡量兩個隨機變數線性相關的程度：
 
 $$
-\mathrm{cov}(x_i, x_j) = \mathbb{E}\!\left[(x_i-\mu_i)(x_j-\mu_j)\right]
+\mathrm{cov}(x_i, x_j) = \mathbb{E}\left[(x_i-\mu_i)(x_j-\mu_j)\right]
 $$
 
 
