@@ -65,7 +65,7 @@ $$
 
 
 **關鍵性質：**
-- **對稱**：$\mathrm{cov}(x_i, x_j) = \mathrm{cov}(x_j, x_i)$
+- **對稱**：$$ \mathrm{cov}(x_i, x_j) = \mathrm{cov}(x_j, x_i) $$
 - **正半定**：所有特徵值 ≥ 0
 - **對角線** = 各變數的變異數
 
