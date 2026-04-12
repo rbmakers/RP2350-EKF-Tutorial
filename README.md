@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/26659056/README.md)
+
 # Kalman Filter & Extended Kalman Filter — A Complete Tutorial
 
 > **Target audience:** Engineers and students with basic linear algebra background.  
