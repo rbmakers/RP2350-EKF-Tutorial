@@ -73,7 +73,7 @@ For a state vector **x** = [x₁, x₂, …, xₙ]ᵀ, the **covariance matrix**
 ```
          ┌ σ₁²        cov(x₁,x₂)  ···  cov(x₁,xₙ) ┐
 Σ  =     │ cov(x₂,x₁) σ₂²         ···  cov(x₂,xₙ) │
-         │      ⋮                  ⋱        ⋮       │
+         │      ⋮                  ⋱        ⋮   │
          └ cov(xₙ,x₁) cov(xₙ,x₂) ···  σₙ²         ┘
 ```
 
