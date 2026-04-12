@@ -413,15 +413,15 @@ Cov update:       Pₖ = (I − Kₖ Hₖ) Pₖ⁻
                 ┌──────────────────────────────────────┐
                 │              PREDICT                 │
                 │                                      │
-                |  x̂ₖ₋₁, Pₖ₋₁ ──►  x̂ₖ⁻ = A x̂ₖ₋₁ + B uₖ   │
-                │  Pₖ⁻  = A Pₖ₋₁ Aᵀ + Q                 │
+                |  x̂ₖ₋₁, Pₖ₋₁ ──►  x̂ₖ⁻ = A x̂ₖ₋₁ + B uₖ │
+                │  Pₖ⁻  = A Pₖ₋₁ Aᵀ + Q                |
                 └─────────────────┬────────────────────┘
                                   │  x̂ₖ⁻, Pₖ⁻
                                   ▼
                 ┌──────────────────────────────────────┐
                 │              UPDATE                  │
                 │                                      │
-                |  zₖ ──►   y = zₖ − H x̂ₖ⁻              │
+                |  zₖ ──►   y = zₖ − H x̂ₖ⁻             │
                 │  S = H Pₖ⁻ Hᵀ + R                    │
                 │  K = Pₖ⁻ Hᵀ S⁻¹                      │
                 │  x̂ₖ = x̂ₖ⁻ + K y                      │
@@ -532,7 +532,7 @@ State dimension n = 15 (typical EKF for a drone INS)
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │  IMU @ 1 kHz                                                │
-│  ──────────► EKF Predict every 1 ms                        │
+│  ──────────► EKF Predict every 1 ms                         │
 │              (f integrates IMU, F = kinematic Jacobian)     │
 └─────────────────────────────┬───────────────────────────────┘
                               │
@@ -565,21 +565,21 @@ This is the inverse covariance working as a *reliability weight* in real time.
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║                  WHAT IS A KALMAN FILTER?                   ║
+║                  WHAT IS A KALMAN FILTER?                    ║
 ╠══════════════════════════════════════════════════════════════╣
 ║                                                              ║
-║   You have TWO sources of information:                      ║
+║   You have TWO sources of information:                       ║
 ║                                                              ║
-║   1. A MODEL: "Physics says I should be here"               ║
-║      → Encoded in A (or f), with uncertainty Q              ║
+║   1. A MODEL: "Physics says I should be here"                ║
+║      → Encoded in A (or f), with uncertainty Q               ║
 ║                                                              ║
-║   2. A SENSOR: "My instrument reads this"                   ║
-║      → Encoded in H (or h), with uncertainty R              ║
+║   2. A SENSOR: "My instrument reads this"                    ║
+║      → Encoded in H (or h), with uncertainty R               ║
 ║                                                              ║
-║   The KF asks: "Given both, what is my BEST estimate?"      ║
+║   The KF asks: "Given both, what is my BEST estimate?"       ║
 ║                                                              ║
-║   Answer: Weight each source by its PRECISION (Σ⁻¹)        ║
-║   The more precise source receives more weight.             ║
+║   Answer: Weight each source by its PRECISION (Σ⁻¹)          ║
+║   The more precise source receives more weight.              ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
